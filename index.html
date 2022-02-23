@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alminhas no Distrito de Vila Real</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Alminhas - Mapa interactivo">
+    <meta name="keywords" content="Alminhas, Distrito de Vila Real, WebSig, Mapa Interactivo">
+    <meta name="author" content="Ezequiel Correia, Projecto Alminhas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <script src="js/leaflet.js"></script>
+    <script src="data/vreal.geojson"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        #map{
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+        .legenda {
+            padding: 6px 8px;
+            background-color: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .legenda div {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        div.legenda.leaflet-control br {
+            clear: both;
+        }
+        .leaflet-tooltip.labels {
+            background-color: transparent;
+            border: transparent;
+            box-shadow: none;
+            font-weight: normal;
+            font-size: 8px;
+        }        
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="js/layers.js"></script>
+</body>
+</html>
